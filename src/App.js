@@ -23,7 +23,7 @@ function App() {
 
   function handleStart(){
     let promise = new Promise(function(resolve, reject) {
-      axios.get(`http://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: {location:curLoc}})
+      axios.get(`https://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: {location:curLoc}})
       .then(res => {
       //console.log(res.data);
         if(res.data !== 'LOCATION_NOT_FOUND'){
