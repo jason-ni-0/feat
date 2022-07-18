@@ -39,7 +39,7 @@ function Price(){
 
     function makeCall(quer){
     //console.log(quer);
-        axios.get(`http://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results`, { params: quer})
+        axios.get(`http://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: quer})
     .then(res => {
     //console.log(res.data.total);
       if(res.data === 'LOCATION_NOT_FOUND'){
@@ -111,7 +111,7 @@ function Price(){
         console.log(search);
         //makeCall(search);
         let promise = new Promise(function(resolve, reject) {
-            axios.get(`http://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results`, { params: search})
+            axios.get(`http://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: search})
     .then(res => {
     //console.log(res.data.total);
         if(!res.data.businesses.length){
