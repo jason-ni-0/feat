@@ -9,7 +9,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import appReducer from './reducers/reducer';
 import { BrowserRouter as Router, Route, Navigate, Routes} from "react-router-dom";
-import "./0AFF3567B090FD04433E7D47CA0F90F3.txt"
 
 const store = createStore(appReducer);
 
@@ -31,10 +30,6 @@ root.render(
           <Route
             path="/feat"
             element={ <Feat /> }
-          />
-          <Route
-            path="/.well-known/pki-validation/"
-            element="0AFF3567B090FD04433E7D47CA0F90F3.txt"
           />
       </Routes>
   </Router>

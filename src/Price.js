@@ -108,7 +108,7 @@ function Price(){
             var finPr = {price: pr}; 
             Object.assign(search, search, finPr);
         }
-        console.log(search);
+        //console.log(search);
         //makeCall(search);
         let promise = new Promise(function(resolve, reject) {
             axios.get(`https://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: search})
