@@ -1,7 +1,8 @@
 {
-  "name": "feat-test",
+  "name": "Feat",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://jason4520.github.io",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "axios": "^0.27.2",
