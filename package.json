@@ -1,5 +1,5 @@
 {
-  "name": "feat-test",
+  "name": "Feat",
   "version": "1.0.0",
   "homepage": "https://jason4520.github.io/feat",
   "private": true,
@@ -21,8 +21,10 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
+    "eject": "craco eject"
   },
   "browserslist": {
     "production": [
