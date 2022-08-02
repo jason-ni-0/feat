@@ -2,7 +2,7 @@
   "name": "Feat",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://jason4520.github.io",
+  "homepage": "https://jason4520.github.io/feat",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "axios": "^0.27.2",
