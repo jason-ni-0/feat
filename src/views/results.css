@@ -1,0 +1,93 @@
+.results-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(90deg, rgb(189, 195, 199) 0.00%,rgb(111, 70, 200) 100.00%);
+}
+.results-container1 {
+  width: 85%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.results-container2 {
+  width: 50%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 25%;
+  display: flex;
+  margin-top: var(--dl-space-space-halfunit);
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  margin-bottom: var(--dl-space-space-halfunit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.results-get-new-result-button {
+  color: var(--dl-color-gray-white);
+  width: 50%;
+  height: 8%;
+  font-size: 3vw;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  border-color: var(--dl-color-gray-black);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-halfunit);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: #aa00ff;
+}
+.results-get-new-result-button:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+@media(max-width: 991px) {
+  .results-container2 {
+    height: 30%;
+  }
+  .results-get-new-result-button {
+    background-color: #aa00ff;
+  }
+}
+@media(max-width: 767px) {
+  .results-container2 {
+    height: 30%;
+  }
+  .results-get-new-result-button {
+    color: var(--dl-color-gray-white);
+    background-color: #aa00ff;
+  }
+}
+@media(max-width: 479px) {
+  .results-container2 {
+    height: 30%;
+  }
+  .results-get-new-result-button {
+    color: var(--dl-color-gray-white);
+    height: 10%;
+    font-size: 5vw;
+    background-color: #aa00ff;
+  }
+}
+.slick-slider {
+  overflow: hidden;
+  cursor: pointer;
+}
+img{
+  height: 100%;
+  max-width: 100%;
+}

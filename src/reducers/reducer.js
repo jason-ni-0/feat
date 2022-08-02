@@ -4,7 +4,8 @@ const initialState = {
     distance: 40000,
     categories: [],
     price: [],
-    result: ""
+    result: "",
+    res_page: 0
 }
 
 const appReducer = (state = initialState, action) => {
@@ -20,6 +21,12 @@ const appReducer = (state = initialState, action) => {
     return {
         ...state, 
         page: action.payload
+    };
+
+    case 'RES_PAGE_CHANGED': 
+    return {
+        ...state, 
+        res_page: action.payload
     };
 
     case 'DIST_CHANGED': 

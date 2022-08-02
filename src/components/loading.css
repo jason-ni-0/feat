@@ -1,0 +1,30 @@
+.loading-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .loading-text {
+    width: 90%;
+    height: 100%;
+    font-size: 11vw;
+    align-self: center;
+    font-style: normal;
+    margin-top: var(--dl-space-space-unit);
+    text-align: center;
+    font-family: Fira Sans;
+    font-weight: 700;
+    margin-left: var(--dl-space-space-halfunit);
+    padding-top: 10%;
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-unit);
+    padding-bottom: 10%;
+  }
+  @media(max-width: 479px) {
+    .loading-text {
+      padding-top: 30%;
+    }
+  }
+  

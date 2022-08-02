@@ -1,0 +1,214 @@
+.distance-container {
+  width: 1200px;
+  height: 372px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.distance-container1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+.distance-text {
+  width: 100%;
+  height: 15%;
+  font-size: 3.5vw;
+  align-self: center;
+  text-align: center;
+  font-family: Fira Sans;
+  padding-top: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.distance-button {
+  color: var(--dl-color-gray-white);
+  width: 80%;
+  height: 15%;
+  font-size: 2.5vw;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-sixunits);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-sixunits);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: #aa00ff;
+}
+.distance-button:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+.distance-button1 {
+  color: var(--dl-color-gray-white);
+  width: 80%;
+  height: 15%;
+  font-size: 2.5vw;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-sixunits);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-sixunits);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: #aa00ff;
+}
+.distance-button1:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+.distance-button2 {
+  color: var(--dl-color-gray-white);
+  width: 80%;
+  height: 15%;
+  font-size: 2.5vw;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-sixunits);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-sixunits);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: #aa00ff;
+}
+.distance-button2:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+.distance-button3 {
+  color: var(--dl-color-gray-white);
+  width: 80%;
+  height: 15%;
+  font-size: 2.5vw;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-halfunit);
+  padding-top: var(--dl-space-space-halfunit);
+  margin-right: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-sixunits);
+  margin-bottom: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-sixunits);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: #aa00ff;
+}
+.distance-button3:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+.distance-button4 {
+  color: var(--dl-color-gray-white);
+  width: 15%;
+  height: 10%;
+  font-size: 2vw;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-twounits);
+  text-align: center;
+  transition: 0.3s;
+  font-family: Fira Sans;
+  margin-left: var(--dl-space-space-twounits);
+  margin-right: var(--dl-space-space-unit);
+  margin-bottom: var(--dl-space-space-twounits);
+  background-color: #aa00ff;
+}
+.distance-button4:hover {
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+}
+@media(max-width: 991px) {
+  .distance-text {
+    font-size: 4vw;
+  }
+  .distance-button {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button1 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button2 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button3 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button4 {
+    font-size: 2.5vw;
+  }
+}
+@media(max-width: 767px) {
+  .distance-button {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button1 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button2 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button3 {
+    width: 80%;
+    font-size: 3vw;
+  }
+  .distance-button4 {
+    font-size: 3vw;
+  }
+}
+@media(max-width: 479px) {
+  .distance-container {
+    padding-right: 0px;
+  }
+  .distance-text {
+    font-size: 5vw;
+  }
+  .distance-button {
+    width: 90%;
+    font-size: 3.5vw;
+  }
+  .distance-button1 {
+    width: 90%;
+    height: 25%;
+    font-size: 3.5vw;
+  }
+  .distance-button2 {
+    width: 90%;
+    height: 25%;
+    font-size: 3.5vw;
+  }
+  .distance-button3 {
+    width: 90%;
+    height: 25%;
+    font-size: 3.5vw;
+  }
+  .distance-button4 {
+    font-size: 3vw;
+  }
+}

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export const changeLoc = (newLoc) => {
     return {
         type: 'LOC_CHANGED',
@@ -41,6 +39,14 @@ export const changeResult = (newResult) => {
         payload: newResult
     };
 };
+
+export const changeResPage = (newResPage) => {
+    return {
+        type: 'RES_PAGE_CHANGED',
+        payload: newResPage
+    };
+};
+
 
 export function getRandomInt(max) {
     return Math.floor(Math.random() * max);

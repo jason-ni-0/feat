@@ -1,43 +1,39 @@
-import React from 'react'; //import 'React' default export, and { Component } non-default export from react
-// App.css was a hangover from the create-react-app, it's not really needed for this basic example
+import React from 'react'
 import axios from "axios";
-import Button from "@material-ui/core/Button";
-import App from "./App";
-import Type from "./Type";
-import './App.css';
-import { Alert, View, SafeAreaView, StyleSheet } from 'react-native';
 
 import { BrowserRouter as Router, Route, useNavigate, Routes} from "react-router-dom";
-
 import { useSelector, useDispatch } from "react-redux";
-import { changePage, changePrice, getRandomInt, changeResult} from "./actions";
+import { changePage, changePrice, getRandomInt, changeResult} from "../actions";
 
-function Price(){
-    const dispatch = useDispatch();
-    const page = useSelector((state) => state.page);
-        const location = useSelector((state) => state.location);
-        const distance = useSelector((state) => state.distance);
-        const categories = useSelector((state) => state.categories);
-        const price = useSelector((state) => state.price);
-        const result = useSelector((state) => state.result);
-    
-    const [checked, setChecked] = React.useState([]);
+import PropTypes from 'prop-types'
 
-    let navigate = useNavigate(); 
-    const goFEAT = (res) =>{ 
-        let path = `/FEAT`; 
-        navigate(path,{state:res});
+import './price.css'
+
+const Price = (props) => {
+  const dispatch = useDispatch();
+
+  const location = useSelector((state) => state.location);
+  const distance = useSelector((state) => state.distance);
+  const categories = useSelector((state) => state.categories);
+  const price = useSelector((state) => state.price);
+  //console.log(price);
+
+  const [checked, setChecked] = React.useState([]);
+
+  const navigate = useNavigate(); 
+  const goResults = (res) =>{ 
+    const path = `/results`; 
+    navigate(path,{state:res});
+  }
+  function handleBack() {
+    dispatch(changePage("type"));
   }
 
-    function handleBack() {
-        dispatch(changePage("type"));
-    }
-
-    function addStr(str1, str2){
-        return str1+str2;
-    }
-
-    function makeCall(quer){
+  function addStr(str1, str2){
+    return str1+str2;
+  }
+  /*
+  function makeCall(quer){
     //console.log(quer);
         axios.get(`https://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: quer})
     .then(res => {
@@ -55,7 +51,17 @@ function Price(){
         //console.log(business.name); 
         businesses.push(business);
       }
-      const result = businesses[getRandomInt(businesses.length)];
+      const result = [];
+      if(businesses.length <= 3){
+        result = businesses;
+      }
+      else{
+        while(result.length != 3){
+          var randInt = getRandomInt(businesses.length);
+          result.push(businesses[randInt]);
+          businesses.splice(randInt, 1);
+        }
+      }
       //console.log(result);
       dispatch(changeResult(result));
       return result;
@@ -69,15 +75,18 @@ function Price(){
       console.log('Will unmount');
     };
   } // Empty array means to only run once on mount.
+  */
 
     function handleSubmit() {
         //console.log(checked);
+        /*
         if (checked.length) {
             dispatch(changePrice(checked));
         }
         else{
             dispatch(changePrice([]));
         }
+        */
         dispatch(changePage('loading'));
        //console.log(location, distance, price, categories[0].value);
         const search = {
@@ -116,6 +125,7 @@ function Price(){
     //console.log(res.data.total);
         if(!res.data.businesses.length){
             alert("There weren't any results that matched your search. It just wasn't meant to be! Change search and try again. ");
+            dispatch(changePage("price"));
             reject('No results');
             return;
       }
@@ -125,7 +135,17 @@ function Price(){
         //console.log(business.name); 
         businesses.push(business);
       }
-      const result = businesses[getRandomInt(businesses.length)];
+      var result = [];
+      if(businesses.length <= 3){
+        result = businesses;
+      }
+      else{
+        while(result.length != 3){
+          var randInt = getRandomInt(businesses.length);
+          result.push(businesses[randInt]);
+          businesses.splice(randInt, 1);
+        }
+      }
       //console.log(result);
       dispatch(changeResult(result));
       resolve(result);
@@ -138,10 +158,10 @@ function Price(){
           promise.then(function(response) {
           if(response){
             //console.log(response);
-            goFEAT(response);
+            goResults(response);
           }
         }, function(error){
-            alert('try again');
+            //alert('try again');
         } );
         //console.log(result);
         
@@ -149,6 +169,8 @@ function Price(){
 
     // Add/Remove checked item from list
     const handleCheck = (event) => {
+    //setChecked([...checked, event.target.value]);
+    let promise = new Promise(function(resolve, reject) {
     var updatedList = [...checked];
         if (event.target.checked) {
         updatedList = [...checked, event.target.value];
@@ -156,35 +178,71 @@ function Price(){
         updatedList.splice(checked.indexOf(event.target.value), 1);
         }
         setChecked(updatedList);
-        dispatch(changePrice(checked));
+        resolve(updatedList);
+        });
+        promise.then(function(response) {
+          if(response){
+            //console.log(response);
+            dispatch(changePrice(response));
+          }
+        }, function(error){
+            //alert('try again');
+        } );
     };
 
     // Return classes based on whether item is checked
     const isChecked = (item) =>
     checked.includes(item) ? "checked-item" : "not-checked-item";
-    
-    if(page === 'price'){
-        return(
-        <div>
-            <h3>How much are you willing to spend?</h3>
-            <p>(Select one or more options, leave empty if no preference)</p>
-            <div>
-            {[{show:'Low($)',value: '1'},{show:'Mid($$)',value:'2'}, {show:'High($$$)',value:'3'}, {show:'Highest($$$$)', value:'4'}].map((item, index) => (
-                <div key={index}>
-                    <input value={item.value} type="checkbox" onChange={handleCheck} />
-                    <span className={isChecked(item.value)}>{item.show}</span>
-                </div>
-                ))}
-            </div>
-            <Button onClick={handleBack}>Back</Button>
-            <Button onClick={handleSubmit}>Submit</Button>
-        </div>)
-    }
-    else if(page === 'type'){
-        return(<div>
-            <Type />
-        </div>)
-    }
+  return (
+    <div className="price-container">
+      <div className="price-container1">
+        <h1 className="price-text">{props.heading}</h1>
+        <span className="price-text1">{props.text}</span>
+        <div className="price-container2">
+          <input type="checkbox" className="price-checkbox" onChange={handleCheck} value='1' />
+          <label className="price-text2">{props.text1}</label>
+        </div>
+        <div className="price-container3">
+          <input type="checkbox" className="price-checkbox1" onChange={handleCheck} value='2'/>
+          <label className="price-text3">{props.text11}</label>
+        </div>
+        <div className="price-container4">
+          <input type="checkbox" className="price-checkbox2" onChange={handleCheck} value='3'/>
+          <label className="price-text4">{props.text111}</label>
+        </div>
+        <div className="price-container5">
+          <input type="checkbox" className="price-checkbox3" onChange={handleCheck} value='4'/>
+          <label className="price-text5">{props.text1111}</label>
+        </div>
+      </div>
+      <div className="price-container6">
+        <button className="price-button button" onClick={handleBack}>{props.button2}</button>
+        <button className="price-button1 button" onClick={handleSubmit}>{props.button21}</button>
+      </div>
+    </div>
+  )
 }
 
-export default Price;
+Price.defaultProps = {
+  text1111: 'Highest($$$$)',
+  text: '(Select one or more options, leave empty if no preference)',
+  heading: 'How much are you willing to spend?',
+  text11: 'Mid($$)',
+  button2: 'Back',
+  button21: 'Submit',
+  text111: 'High($$$)',
+  text1: 'Low($)',
+}
+
+Price.propTypes = {
+  text1111: PropTypes.string,
+  text: PropTypes.string,
+  heading: PropTypes.string,
+  text11: PropTypes.string,
+  button2: PropTypes.string,
+  button21: PropTypes.string,
+  text111: PropTypes.string,
+  text1: PropTypes.string,
+}
+
+export default Price
