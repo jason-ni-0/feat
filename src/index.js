@@ -17,14 +17,11 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <div>
           <Routes>
-            <Route exact path="/results" element={<Results />} />
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/results" element={<Results />} />
             <Route path="*" element={<Error />} />
           </Routes>
-
-        </div>
       </Router>
     </Provider>
   )
