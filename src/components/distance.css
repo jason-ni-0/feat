@@ -129,7 +129,6 @@
   font-size: 2vw;
   align-self: flex-start;
   margin-top: var(--dl-space-space-twounits);
-  text-align: center;
   transition: 0.3s;
   font-family: Fira Sans;
   margin-left: var(--dl-space-space-twounits);
@@ -200,24 +199,25 @@
   }
   .distance-button {
     width: 90%;
-    font-size: 3.5vw;
+    font-size: 2vh;
   }
   .distance-button1 {
     width: 90%;
     height: 25%;
-    font-size: 3.5vw;
+    font-size: 2vh;
   }
   .distance-button2 {
     width: 90%;
     height: 25%;
-    font-size: 3.5vw;
+    font-size: 2vh;
   }
   .distance-button3 {
     width: 90%;
     height: 25%;
-    font-size: 3.5vw;
+    font-size: 2vh;
   }
   .distance-button4 {
-    font-size: 3vw;
+    font-size: 1.5vh;
+    text-align: center;
   }
 }

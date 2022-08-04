@@ -165,7 +165,6 @@
   font-size: 2vw;
   align-self: center;
   margin-top: var(--dl-space-space-unit);
-  text-align: center;
   font-family: Fira Sans;
   margin-left: var(--dl-space-space-unit);
   margin-right: var(--dl-space-space-sixunits);
@@ -184,4 +183,25 @@
   margin-right: var(--dl-space-space-unit);
   margin-bottom: var(--dl-space-space-unit);
   background-color: #aa00ff;
+}
+@media(max-width: 1600px) {
+  .price-button {
+    text-align: center;
+  }
+}
+@media(max-width: 1200px) {
+  .price-button {
+    text-align: center;
+  }
+}
+@media(max-width: 479px) {
+  .price-button {
+    width: 30%;
+    font-size: 1.5vh;
+  }
+  .price-button1 {
+    width: 30%;
+    font-size: 1.5vh;
+    text-align: center;
+  }
 }
