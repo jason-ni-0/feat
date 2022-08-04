@@ -9,7 +9,6 @@
 .first-result-text {
   width: 60%;
   height: 20%;
-  font-size: 3.5vh;
   align-self: center;
   text-align: center;
   font-family: Fira Sans;
@@ -19,7 +18,6 @@
 .first-result-text1 {
   width: 100%;
   height: 60%;
-  font-size: 9vh;
   align-self: center;
   text-align: center;
   font-family: Fira Sans;
@@ -34,12 +32,28 @@
   margin-right: var(--dl-space-space-halfunit);
   margin-bottom: var(--dl-space-space-halfunit);
 }
+@media(max-width: 1600px) {
+  .first-result-text {
+    font-size: 3vh;
+  }
+  .first-result-text1 {
+    font-size: 8vh;
+  }
+}
 @media(max-width: 991px) {
   .first-result-text {
     font-size: 2vw;
   }
   .first-result-text1 {
     font-size: 6vw;
+  }
+}
+@media(max-width: 767px) {
+  .first-result-text {
+    font-size: 1.5vh;
+  }
+  .first-result-text1 {
+    font-size: 5vh;
   }
 }
 @media(max-width: 479px) {

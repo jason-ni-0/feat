@@ -46,8 +46,12 @@
   background-color: #aa00ff;
 }
 .distance-button:hover {
+  display: flex;
+  text-align: center;
+  align-items: center;
   border-color: var(--dl-color-gray-500);
   border-style: solid;
+  justify-content: center;
 }
 .distance-button1 {
   color: var(--dl-color-gray-white);
@@ -140,6 +144,8 @@
 @media(max-width: 991px) {
   .distance-text {
     font-size: 4vw;
+    margin-top: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-unit);
   }
   .distance-button {
     width: 80%;
@@ -162,24 +168,27 @@
   }
 }
 @media(max-width: 767px) {
+  .distance-text {
+    font-size: 3vh;
+  }
   .distance-button {
     width: 80%;
-    font-size: 3vw;
+    font-size: 2vh;
   }
   .distance-button1 {
     width: 80%;
-    font-size: 3vw;
+    font-size: 2vh;
   }
   .distance-button2 {
     width: 80%;
-    font-size: 3vw;
+    font-size: 2vh;
   }
   .distance-button3 {
     width: 80%;
-    font-size: 3vw;
+    font-size: 2vh;
   }
   .distance-button4 {
-    font-size: 3vw;
+    font-size: 2vh;
   }
 }
 @media(max-width: 479px) {

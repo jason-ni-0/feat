@@ -19,7 +19,6 @@
   color: var(--dl-color-gray-white);
   bottom: 0%;
   position: absolute;
-  font-size: 2.5vh;
   align-self: center;
   text-align: center;
   transition: 0.3s;
@@ -36,7 +35,6 @@
   right: 2%;
   bottom: 0%;
   position: absolute;
-  font-size: 2.5vh;
   align-self: center;
   transition: 0.3s;
   font-family: Fira Sans;
@@ -59,11 +57,19 @@
   margin-right: var(--dl-space-space-unit);
   margin-bottom: var(--dl-space-space-halfunit);
 }
+@media(max-width: 1200px) {
+  .scroll-bar-results-button {
+    font-size: 1.5vh;
+  }
+  .scroll-bar-results-button1 {
+    font-size: 1.5vh;
+  }
+}
 @media(max-width: 991px) {
   .scroll-bar-results-button {
     width: 25%;
     height: 100%;
-    font-size: 2.5vh;
+    font-size: 1.5vh;
     margin-top: 0px;
     margin-left: 0px;
     padding-top: var(--dl-space-space-halfunit);
@@ -76,7 +82,7 @@
   .scroll-bar-results-button1 {
     width: 25%;
     height: 100%;
-    font-size: 2.5vh;
+    font-size: 1.5vh;
     margin-top: 0px;
     text-align: center;
     margin-left: 0px;
@@ -101,8 +107,8 @@
     top: 0px;
     left: 0px;
     width: 20%;
-    height: 65%;
-    font-size: 2.5vh;
+    height: 100%;
+    font-size: 1.5vh;
     padding-top: var(--dl-space-space-halfunit);
     padding-left: var(--dl-space-space-halfunit);
     padding-right: var(--dl-space-space-halfunit);
@@ -110,8 +116,8 @@
   }
   .scroll-bar-results-button1 {
     width: 20%;
-    height: 65%;
-    font-size: 2.5vh;
+    height: 100%;
+    font-size: 1.5vh;
   }
   .scroll-bar-results-root-class-name1 {
     height: 7%;
@@ -119,10 +125,12 @@
 }
 @media(max-width: 479px) {
   .scroll-bar-results-button {
-    font-size: 3vh;
+    top: 0%;
+    left: 2%;
+    font-size: 1.5vh;
   }
   .scroll-bar-results-button1 {
-    font-size: 3vw;
+    font-size: 1.5vh;
   }
   .scroll-bar-results-root-class-name1 {
     height: 7%;
