@@ -10,6 +10,8 @@ import ResultInfo from '../components/result-info'
 import ScrollBarResults from '../components/scroll-bar-results'
 import './results.css'
 
+//Ratings: https://s3-media0.fl.yelpcdn.com/assets/public/stars_v2.yji-59bbc2cf8e3d4be04fcc.png
+
 const Results = (props) => {
   const resPage = useSelector(state => state.res_page);
   const location = useLocation();

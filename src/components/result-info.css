@@ -18,7 +18,7 @@
 .result-info-text {
   width: 100%;
   height: 15%;
-  font-size: 2vw;
+  font-size: 4vh;
   align-self: flex-start;
   margin-top: var(--dl-space-space-halfunit);
   font-family: Fira Sans;
@@ -29,7 +29,7 @@
 .result-info-text1 {
   width: 100%;
   height: 15%;
-  font-size: 2vw;
+  font-size: 4vh;
   align-self: flex-start;
   margin-top: var(--dl-space-space-halfunit);
   font-family: Fira Sans;
@@ -40,7 +40,7 @@
 .result-info-text2 {
   width: 100%;
   height: 15%;
-  font-size: 2vw;
+  font-size: 4vh;
   align-self: flex-start;
   margin-top: var(--dl-space-space-halfunit);
   font-family: Fira Sans;
@@ -51,7 +51,7 @@
 .result-info-text3 {
   width: 100%;
   height: 15%;
-  font-size: 2vw;
+  font-size: 4vh;
   align-self: flex-start;
   margin-top: var(--dl-space-space-halfunit);
   font-family: Fira Sans;
@@ -63,7 +63,7 @@
   color: #aa00ff;
   width: 100%;
   height: 15%;
-  font-size: 2vw;
+  font-size: 4vh;
   align-self: flex-start;
   font-style: normal;
   margin-top: var(--dl-space-space-halfunit);
@@ -83,21 +83,72 @@
   margin-right: var(--dl-space-space-unit);
   margin-bottom: var(--dl-space-space-halfunit);
 }
-@media(max-width: 479px) {
+@media(max-width: 1600px) {
   .result-info-text {
-    font-size: 4.5vw;
+    font-size: 4vh;
   }
   .result-info-text1 {
-    font-size: 4.5vw;
+    font-size: 4vh;
   }
   .result-info-text2 {
-    font-size: 4.5vw;
+    font-size: 4vh;
   }
   .result-info-text3 {
-    font-size: 4.5vw;
+    font-size: 4vh;
   }
   .result-info-text4 {
-    font-size: 4.5vw;
+    font-size: 4vh;
+  }
+}
+@media(max-width: 1200px) {
+  .result-info-text {
+    font-size: 4vh;
+  }
+  .result-info-text1 {
+    font-size: 4vh;
+  }
+  .result-info-text2 {
+    font-size: 4vh;
+  }
+  .result-info-text3 {
+    font-size: 4vh;
+  }
+  .result-info-text4 {
+    font-size: 4vh;
+  }
+}
+@media(max-width: 991px) {
+  .result-info-text {
+    font-size: 3.5vh;
+  }
+  .result-info-text1 {
+    font-size: 3.5vh;
+  }
+  .result-info-text2 {
+    font-size: 3.5vh;
+  }
+  .result-info-text3 {
+    font-size: 3.5vh;
+  }
+  .result-info-text4 {
+    font-size: 3.5vh;
+  }
+}
+@media(max-width: 479px) {
+  .result-info-text {
+    font-size: 3vh;
+  }
+  .result-info-text1 {
+    font-size: 3vh;
+  }
+  .result-info-text2 {
+    font-size: 3vh;
+  }
+  .result-info-text3 {
+    font-size: 3vh;
+  }
+  .result-info-text4 {
+    font-size: 3vh;
   }
   .result-info-root-class-name {
     height: 30%;

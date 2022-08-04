@@ -9,6 +9,7 @@
 .first-result-text {
   width: 60%;
   height: 20%;
+  font-size: 3.5vh;
   align-self: center;
   text-align: center;
   font-family: Fira Sans;
@@ -18,7 +19,7 @@
 .first-result-text1 {
   width: 100%;
   height: 60%;
-  font-size: 5vw;
+  font-size: 9vh;
   align-self: center;
   text-align: center;
   font-family: Fira Sans;

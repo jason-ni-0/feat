@@ -35,7 +35,7 @@
   color: var(--dl-color-gray-white);
   width: 50%;
   height: 8%;
-  font-size: 3vw;
+  font-size: 4.5vh;
   align-self: center;
   margin-top: var(--dl-space-space-halfunit);
   text-align: center;
@@ -54,6 +54,11 @@
 .results-get-new-result-button:hover {
   border-color: var(--dl-color-gray-500);
   border-style: solid;
+}
+@media(max-width: 1200px) {
+  .results-get-new-result-button {
+    font-size: 3.5vh;
+  }
 }
 @media(max-width: 991px) {
   .results-container2 {
@@ -83,10 +88,7 @@
     background-color: #aa00ff;
   }
 }
-.slick-slider {
-  overflow: hidden;
-  cursor: pointer;
-}
+
 img{
   height: 100%;
   max-width: 100%;
