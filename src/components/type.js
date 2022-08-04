@@ -58,16 +58,18 @@ const Type = (props) => {
   { value: 'vietnamese', label: 'Vietnamese'},
   { value: 'vegetarian', label: 'Vegetarian' }];
 
-  const optionsType = [{ value: 'breakfast_brunch', label: 'Breakfast' },
+  const optionsType = [
+  { value: 'restaurants', label: 'Restaurant' },
+  { value: 'breakfast_brunch', label: 'Breakfast' },
   { value: 'bakeries', label: 'Bakery' },
   { value: 'bars', label: 'Bar' },
   //{ value: 'bubletea', label: 'Bubble Tea' },
-  { value: 'coffee', label: 'Coffee' },
+  { value: 'coffee', label: 'Coffee' }
   //{ value: 'cafes', label: 'Cafe' },
   //{ value: 'diner', label: 'Diner' },
   //{ value: 'dessert', label: 'Dessert' },
   //{ value: 'foodtrucks', label: 'Food Truck' },
-  { value: 'restaurants', label: 'Restaurant' }];
+];
   
   function handleChange (selectedOptions)  {
       setSelectedOption({ selectedOptions });
