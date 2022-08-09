@@ -61,8 +61,9 @@ const Type = (props) => {
   const optionsType = [
   { value: 'restaurants', label: 'Restaurant' },
   { value: 'breakfast_brunch', label: 'Breakfast' },
-  { value: 'bakeries', label: 'Bakery' },
+  //{ value: 'bakeries', label: 'Bakery' },
   { value: 'bars', label: 'Bar' },
+  { value: 'hotdogs', label: 'Fast Food' },
   //{ value: 'bubletea', label: 'Bubble Tea' },
   { value: 'coffee', label: 'Coffee' }
   //{ value: 'cafes', label: 'Cafe' },
