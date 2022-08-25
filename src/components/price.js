@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from "axios";
 
-import { BrowserRouter as Router, Route, useNavigate, Routes} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { changePage, changePrice, getRandomInt, changeResult} from "../actions";
 
