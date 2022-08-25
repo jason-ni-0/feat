@@ -1,11 +1,13 @@
 const initialState = {
-    location: "",
+    location: null,
     page: 'start',
     distance: 40000,
     categories: [],
     price: [],
     result: "",
-    res_page: 0
+    res_page: 0,
+    latitude: null,
+    longitude: null
 }
 
 const appReducer = (state = initialState, action) => {
@@ -63,6 +65,18 @@ const appReducer = (state = initialState, action) => {
     return {
         ...state, 
         result: action.payload
+    };
+
+    case 'LAT_CHANGED': 
+    return {
+        ...state, 
+        latitude: action.payload
+    };
+
+    case 'LNG_CHANGED': 
+    return {
+        ...state, 
+        longitude: action.payload
     };
 
     default:

@@ -1,0 +1,85 @@
+#logo {
+    border: 1px solid white;
+    background-color: white;
+    font-family: Fira Sans; 
+    font-size: 22px; 
+    border-radius: 10%;
+    font-weight: bold;
+    padding: var(--dl-space-space-halfunit);
+    margin: var(--dl-space-space-halfunit);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+#main-nav {
+    background-color: #aa00ff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+#nav-app {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.navbar-nav {
+    height: 80%;
+}
+.nav-item {
+    height: 100%;
+    padding: var(--dl-space-space-halfunit);
+    margin: var(--dl-space-space-halfunit);
+    font-family: Fira Sans; 
+    font-size: 18px; 
+    font-weight: 450;
+    text-align: center;
+}
+#nav-item-main {
+    border-bottom: 3px solid black;
+    border-radius: 5%;
+}
+#about-bg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding-top: 2%;
+}
+#content-hold{
+    width: 80%;
+    border-radius: 1%;
+    padding: var(--dl-space-space-twounits);
+    padding-top: var(--dl-space-space-halfunit);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+#sublist-item {
+    color: black;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+#sublist-item[aria-selected='true']{
+    color: white;
+    background-color: #aa00ff;
+    border: 1px solid black;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+
+.btn{
+    border:2px solid black;
+    background-color: #aa00ff;
+    color: white
+}
+.btn:hover, .btn:focus{
+    border:2px solid gray;
+    background-color: white;
+    color: #aa00ff
+}
+body {
+    font-family: Fira Sans;
+}
+a{
+    cursor: pointer
+}
+#botContact {
+    color: white;
+}

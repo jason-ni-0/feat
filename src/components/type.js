@@ -1,8 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
 
-import PropTypes from 'prop-types'
-
 import { useSelector, useDispatch } from "react-redux";
 import { changePage, changeCat } from "../actions";
 
@@ -81,15 +79,10 @@ const Type = (props) => {
   }
 
   return (
-    <div className="type-container">
-      <div className="type-container1">
-        <h1 className="type-text">{props.heading2}</h1>
-        <span className="type-text1">{props.text2}</span>
-        {/*<select className="type-select">
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-        </select>*/ }
+    <div class="container-fluid col d-grid gap-3">
+      <p>&nbsp;</p>
+        <h1>What kind of cuisine(s) are you feeling?</h1>
+        <p class="lead">(Leave empty if no preference)</p>
         <Select
           isMulti
           defaultValue={selectedOption}
@@ -100,13 +93,8 @@ const Type = (props) => {
           className="type-select"
           classNamePrefix="select"
         />
-        <h1 className="type-text2">{props.heading1}</h1>
-        <span className="type-text3">{props.text1}</span>
-        {/*<select className="type-select1">
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-        </select>*/}
+        <h1>What kind of place(s)?</h1>
+        <p class="lead">(Leave empty if no preference)</p>
         <Select
           isMulti
           defaultValue={selectedOptionR}
@@ -117,31 +105,13 @@ const Type = (props) => {
           className="type-select"
           classNamePrefix="select"
         />
-      </div>
-      <div className="type-container2">
-        <button className="type-button button" onClick={handleBack}>{props.button2}</button>
-        <button className="type-button1 button" onClick={handleNext}>{props.button21}</button>
-      </div>
+        <p>&nbsp;</p>
+        <div class="btn-toolbar justify-content-between">
+        <button id="backButton" class="btn btn-primary align-self-start" onClick={handleBack}>Back</button>
+        <button id="nextButton" class="btn btn-primary align-self-end" onClick={handleNext}>Next</button>
+        </div>
     </div>
   )
-}
-
-Type.defaultProps = {
-  text1: '(Leave empty if no preference)',
-  button21: 'Next',
-  heading2: 'What kind of cuisine(s) are you feeling?',
-  heading1: 'What kind of restaurant(s)?',
-  button2: 'Back',
-  text2: '(Leave empty if no preference)',
-}
-
-Type.propTypes = {
-  text1: PropTypes.string,
-  button21: PropTypes.string,
-  heading2: PropTypes.string,
-  heading1: PropTypes.string,
-  button2: PropTypes.string,
-  text2: PropTypes.string,
 }
 
 export default Type

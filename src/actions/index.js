@@ -47,6 +47,20 @@ export const changeResPage = (newResPage) => {
     };
 };
 
+export const changeLat= (newLat) => {
+    return {
+        type: 'LAT_CHANGED',
+        payload: newLat
+    };
+};
+
+export const changeLng= (newLng) => {
+    return {
+        type: 'LNG_CHANGED',
+        payload: newLng
+    };
+};
+
 
 export function getRandomInt(max) {
     return Math.floor(Math.random() * max);

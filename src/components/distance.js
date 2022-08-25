@@ -1,6 +1,5 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
 
 import { useSelector, useDispatch } from "react-redux";
 import { changePage, changeDist } from "../actions";
@@ -20,35 +19,16 @@ const Distance = (props) => {
   }
 
   return (
-    <div className="distance-container">
-      <div className="distance-container1">
-        <h1 className="distance-text">{props.heading}</h1>
-        <button className="distance-button button" onClick={() => handleDist(8047)}>{props.button}</button>
-        <button className="distance-button1 button" onClick={() => handleDist(16093)}>{props.button1}</button>
-        <button className="distance-button2 button" onClick={() => handleDist(24140)}>{props.button11}</button>
-        <button className="distance-button3 button" onClick={() => handleDist(40000)}>{props.button111}</button>
-        <button className="distance-button4 button" onClick={handleBack}>{props.BackButton}</button>
-      </div>
+    <div class="container-fluid col d-grid gap-3 justify-content-center">
+      <p>&nbsp;</p>
+      <h1>How far are you willing to travel?</h1>
+      <button className="btn btn-primary btn-lg btn-block"onClick={() => handleDist(8047)}>5 miles</button>
+      <button className="btn btn-primary btn-lg btn-block" onClick={() => handleDist(16093)}>10 miles</button>
+      <button className="btn btn-primary btn-lg btn-block" onClick={() => handleDist(24140)}>15 miles</button>
+      <button className="btn btn-primary btn-lg btn-block" onClick={() => handleDist(40000)}>25 miles</button>
+      <p>&nbsp;</p>
+      <button id="back" className="btn btn-secondary btn-lg" onClick={handleBack}>Back</button>
     </div>
   )
 }
-
-Distance.defaultProps = {
-  button1: '10 miles',
-  heading: 'How far are you willing to travel?',
-  button11: '15 miles',
-  BackButton: 'Back',
-  button: '5 miles',
-  button111: '25 miles',
-}
-
-Distance.propTypes = {
-  button1: PropTypes.string,
-  heading: PropTypes.string,
-  button11: PropTypes.string,
-  BackButton: PropTypes.string,
-  button: PropTypes.string,
-  button111: PropTypes.string,
-}
-
 export default Distance

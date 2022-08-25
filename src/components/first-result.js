@@ -7,9 +7,10 @@ import './first-result.css'
 const FirstResult = (props) => {
   //console.log(props);
   return (
-    <div className={`first-result-container ${props.rootClassName} `}>
-      <h2 className="first-result-text">{props.heading}</h2>
-      <h1 className="first-result-text1">{props.result.name}</h1>
+    <div class="container-fluid col d-grid gap-3">
+      <p>&nbsp;</p>
+      <p class="lead">{props.heading}</p>
+      <div class="display-1 pb-3 mb-3">{props.result.name}</div>
     </div>
   )
 }

@@ -34,16 +34,23 @@ const Home = (props) => {
       toRender = <Start rootClassName="start-root-class-name"></Start>;
   }
   return (
-    <div className="home-container">
+    <div>
       <Helmet>
-        <title>Home - FEAT</title>
-        <meta property="og:title" content="Home - FEAT" />
+        <title>Feat</title>
+        <meta property="og:title" content="Home - Feat" />
       </Helmet>
-      <div className="home-container1">
+      <nav class="navbar" id="main-nav">
+        <div class="container-fluid">
+        <a class="navbar-brand" id="logo" href="/#/feat">FEAT</a>
+      </div>
+      </nav>
+      <div class="container-expand" id="about-bg">
+      <div class="container-fluid bg-white align-items-center" id="content-hold">
         {toRender}
-        {/*<Start rootClassName="start-root-class-name"></Start>*/}
       </div>
     </div>
+  </div>
+
   )
 }
 

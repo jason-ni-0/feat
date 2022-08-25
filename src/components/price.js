@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route, useNavigate, Routes} from "react-router
 import { useSelector, useDispatch } from "react-redux";
 import { changePage, changePrice, getRandomInt, changeResult} from "../actions";
 
-import PropTypes from 'prop-types'
-
 import './price.css'
 
 const Price = (props) => {
@@ -16,6 +14,8 @@ const Price = (props) => {
   const distance = useSelector((state) => state.distance);
   const categories = useSelector((state) => state.categories);
   const price = useSelector((state) => state.price);
+  const latitude = useSelector((state) => state.latitude);
+  const longitude = useSelector((state) => state.longitude);
   //console.log(price);
 
   const [checked, setChecked] = React.useState([]);
@@ -91,7 +91,9 @@ const Price = (props) => {
        //console.log(location, distance, price, categories[0].value);
         const search = {
             location: location,
-            distance: distance
+            distance: distance,
+            latitude: latitude,
+            longitude: longitude
         };
         if (categories.length){
             var cat = "";
@@ -117,7 +119,7 @@ const Price = (props) => {
             var finPr = {price: pr}; 
             Object.assign(search, search, finPr);
         }
-        //console.log(search);
+        console.log(search);
         //makeCall(search);
         let promise = new Promise(function(resolve, reject) {
             axios.get(`https://featserv-env.eba-ifrc9mun.us-west-1.elasticbeanstalk.com/results/`, { params: search})
@@ -194,55 +196,33 @@ const Price = (props) => {
     const isChecked = (item) =>
     checked.includes(item) ? "checked-item" : "not-checked-item";
   return (
-    <div className="price-container">
-      <div className="price-container1">
-        <h1 className="price-text">{props.heading}</h1>
-        <span className="price-text1">{props.text}</span>
-        <div className="price-container2">
-          <input type="checkbox" className="price-checkbox" onChange={handleCheck} value='1' />
-          <label className="price-text2">{props.text1}</label>
+    <div class="container-fluid col d-grid gap-3">
+      <p>&nbsp;</p>
+        <p class="h1">How much are you willing to spend?</p>
+        <p class="lead">(Select one or more options, leave empty if no preference)</p>
+        <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchLow" onChange={handleCheck} value='1' />
+        <label class="form-check-label" for="flexSwitchLow">Low($)</label>
         </div>
-        <div className="price-container3">
-          <input type="checkbox" className="price-checkbox1" onChange={handleCheck} value='2'/>
-          <label className="price-text3">{props.text11}</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchMid" onChange={handleCheck} value='2' />
+          <label class="form-check-label" for="flexSwitchMid">Mid($$)</label>
         </div>
-        <div className="price-container4">
-          <input type="checkbox" className="price-checkbox2" onChange={handleCheck} value='3'/>
-          <label className="price-text4">{props.text111}</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchHigh" onChange={handleCheck} value='3' />
+          <label class="form-check-label" for="flexSwitchHigh">High($$$)</label>
         </div>
-        <div className="price-container5">
-          <input type="checkbox" className="price-checkbox3" onChange={handleCheck} value='4'/>
-          <label className="price-text5">{props.text1111}</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchHighest" onChange={handleCheck} value='4' />
+          <label class="form-check-label" for="flexSwitchHighest">Highest($$$$)</label>
         </div>
-      </div>
-      <div className="price-container6">
-        <button className="price-button button" onClick={handleBack}>{props.button2}</button>
-        <button className="price-button1 button" onClick={handleSubmit}>{props.button21}</button>
-      </div>
+        <p>&nbsp;</p>
+        <div class="btn-toolbar justify-content-between">
+          <button id="backButton" class="btn btn-primary align-self-start" onClick={handleBack}>Back</button>
+          <button id="nextButton" class="btn btn-primary align-self-end" onClick={handleSubmit}>Submit</button>
+        </div>
     </div>
   )
-}
-
-Price.defaultProps = {
-  text1111: 'Highest($$$$)',
-  text: '(Select one or more options, leave empty if no preference)',
-  heading: 'How much are you willing to spend?',
-  text11: 'Mid($$)',
-  button2: 'Back',
-  button21: 'Submit',
-  text111: 'High($$$)',
-  text1: 'Low($)',
-}
-
-Price.propTypes = {
-  text1111: PropTypes.string,
-  text: PropTypes.string,
-  heading: PropTypes.string,
-  text11: PropTypes.string,
-  button2: PropTypes.string,
-  button21: PropTypes.string,
-  text111: PropTypes.string,
-  text1: PropTypes.string,
 }
 
 export default Price

@@ -8,16 +8,34 @@
   justify-content: center;
   background-image: linear-gradient(90deg, rgb(189, 195, 199) 0.00%,rgb(111, 70, 200) 100.00%);
 }
-.home-container1 {
-  width: 85%;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#logo {
+  border: 1px solid white;
   background-color: white;
+  font-family: Fira Sans; 
+  font-size: 22px; 
+  border-radius: 10%;
+  font-weight: bold;
+  padding: var(--dl-space-space-halfunit);
+  margin: var(--dl-space-space-halfunit);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-@media(max-width: 479px) {
-  .container1 {
-    width: 80%;
-  }
+#main-nav {
+  background-color: #aa00ff;
+}
+#about-bg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding-top: 2%;
+  background-image: linear-gradient(90deg, rgb(189, 195, 199) 0.00%,rgb(111, 70, 200) 100.00%);
+}
+#content-hold{
+  width: 80%;
+  border-radius: 1%;
+  padding: var(--dl-space-space-twounits);
+  padding-top: var(--dl-space-space-halfunit);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
