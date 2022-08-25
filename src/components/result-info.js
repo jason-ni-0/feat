@@ -2,7 +2,6 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-import './result-info.css'
 
 const ResultInfo = (props) => {
   //console.log(props);
