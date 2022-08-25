@@ -5,6 +5,7 @@ import "./landing.css"
 import About from "../components/about"
 import FeatPortal from "../components/feat-portal"
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 
 function Landing(){
@@ -24,7 +25,7 @@ function Landing(){
             </Helmet>
             <nav class="navbar" id="main-nav">
             <div class="container-fluid">
-                <a class="navbar-brand" id="logo" href="/#/feat">FEAT</a>
+                <Link className="navbar-brand" id="logo" to="/">FEAT</Link>
             </div>
             </nav>
             <nav class="navbar navbar-expand-sm" id="nav-app">
@@ -59,11 +60,11 @@ function Landing(){
             <nav class="navbar" id="main-nav">
             <p>&nbsp;</p>
             <div class="container-fluid">
-                <a class="navbar-brand" id="logo" href="/#/feat">FEAT</a>
+                <Link className="navbar-brand" id="logo" to="/">FEAT</Link>
             </div>
             <div id="botContact" class="container-fluid col d-grid gap-1">
                 <p>&nbsp;</p>
-                <h3>Contact</h3><p class="lead">Questions or suggestions: jasonni12345@gmail.com</p>
+                <h3>Contact</h3><p className="lead">Questions or suggestions: jasonni12345@gmail.com</p>
                 <p>&nbsp;</p>
             </div>
             </nav>

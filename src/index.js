@@ -17,7 +17,7 @@ const store = createStore(appReducer);
 const App = () => {
   return (
     <Provider store={store}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL + "/"}>
           <Routes>
             <Route exact path="/" element={<Landing />} />
             <Route exact path="/use" element={<Home />} />

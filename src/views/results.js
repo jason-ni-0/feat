@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import {useLocation} from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 import FirstResult from '../components/first-result'
 import ResultInfo from '../components/result-info'
@@ -33,7 +33,7 @@ const Results = (props) => {
       </Helmet>
       <nav class="navbar" id="main-nav">
         <div class="container-fluid">
-        <a class="navbar-brand" id="logo" href="/#/feat">FEAT</a>
+        <Link className="navbar-brand" id="logo" to="/">FEAT</Link>
       </div>
       </nav>
       <div class="container-expand" id="about-bg">

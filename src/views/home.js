@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 import { useSelector,useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 import Start from '../components/start'
 import Distance from '../components/distance'
@@ -41,7 +42,7 @@ const Home = (props) => {
       </Helmet>
       <nav class="navbar" id="main-nav">
         <div class="container-fluid">
-        <a class="navbar-brand" id="logo" href="/#/feat">FEAT</a>
+        <Link className="navbar-brand" id="logo" to="/">FEAT</Link>
       </div>
       </nav>
       <div class="container-expand" id="about-bg">
