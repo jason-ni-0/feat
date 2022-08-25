@@ -1,4 +1,10 @@
-https://jason4520.github.io/feat
+Live demo: https://jason4520.github.io/feat
+
+For all the indecisive people. No more wasting time contemplating where to eat. Let feat(fate) decide where you go!
+
+Start by entering your location, then adding choosing how the maximum distance you would travel. Next choose the categories, whether you want asian food or fast food (note the categories show, for example, asian food OR fast food if multiple items are selected) or a breakfast place. Finally, choose how expensive you are willing to get, and then let the app decide your feat!
+
+By the way, you only can get three options. Any more and us indecisive people will have more choices to make. GO TO YOUR FEAT AND DO NOT LOOK BACK< AS I IS MEANT TO BE.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
