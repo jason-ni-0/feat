@@ -1,7 +1,6 @@
 {
   "name": "Feat",
   "version": "1.0.0",
-  "homepage": "https://jason4520.github.io/feat",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
