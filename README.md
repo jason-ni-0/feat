@@ -1,4 +1,4 @@
-Live demo: https://jason4520.github.io/feat (NO LONGER USED) -> New link: feat.vercel.app
+Live demo: https://jason4520.github.io/feat (NO LONGER USED) -> New link: https://feat.vercel.app
 
 For all the indecisive people. No more wasting time contemplating where to eat. Let feat(fate) decide where you go!
 
