@@ -1,10 +1,13 @@
 import React from 'react'
+import { changePage, changeDist } from "../actions";
 import { useNavigate } from "react-router-dom";
+import { changePage } from "../actions";
 
 function FeatPortal(){
     const navigate = useNavigate(); 
     const featPort = () =>{ 
       const path = `/use`; 
+      dispatch(changePage("start"));
       navigate(path);
     }
     return(
