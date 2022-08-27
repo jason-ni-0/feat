@@ -1,5 +1,5 @@
 import React from 'react'
-import { changePage, changeDist } from "../actions";
+
 import { useNavigate } from "react-router-dom";
 import { changePage } from "../actions";
 
