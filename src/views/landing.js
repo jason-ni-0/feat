@@ -35,7 +35,7 @@ function Landing(){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item active px-md-5" id="nav-item-main">
+                        <li class={(curSlide == "about") ? "nav-item active px-md-5" : "nav-item px-md-5"} id="nav-item-main">
                         <a class="nav-link align-middle" onClick={() => setSlide('about')}>
                         <svg xmlns="http://www.w3.org/2000/svg" color="black" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                         <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
@@ -43,7 +43,7 @@ function Landing(){
                         </a>
                         Home
                         </li>
-                        <li class="nav-item active px-md-5" id="nav-item-main">
+                        <li class={(curSlide == "portal") ? "nav-item active px-md-5" : "nav-item px-md-5"} id="nav-item-main">
                             <a class="nav-link align-middle" onClick={() => setSlide('portal')}>
                             <svg xmlns="http://www.w3.org/2000/svg" color="black" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>

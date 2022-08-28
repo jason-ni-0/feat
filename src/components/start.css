@@ -1,13 +1,13 @@
 .btn{
   border:2px solid black;
-  background-color: #aa00ff;
+  background-color: #511660;
   color: white;
   padding: var(--dl-space-space-unit);
 }
 .btn:hover, .btn:focus{
   border:2px solid gray;
   background-color: white;
-  color: #aa00ff
+  color: #511660
 }
 #locButton {
   border-top-left-radius: 0;
@@ -19,6 +19,6 @@ body {
   font-family: Fira Sans;
 }
 .loadingOverlay {
-  border: 10px solid #aa00ff;
+  border: 10px solid #511660;
   border-radius: 10%;
 }
