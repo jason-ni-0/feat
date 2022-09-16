@@ -62,8 +62,8 @@ function Landing(){
             </nav>
             */}
             <FeatPortal></FeatPortal>
-            <div className="container-fluid col d-grid gap-3 px-5 bg-white">
-            <p>&nbsp;</p>
+    <div className="container-fluid col d-grid gap-3 px-4 bg-white">
+    <p>&nbsp;</p>
     <ul class="nav nav-tabs" id="myTab">
     <p>&nbsp;</p>
         <li class="nav-item" >
