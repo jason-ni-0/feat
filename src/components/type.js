@@ -10,7 +10,7 @@ const Type = (props) => {
   const dispatch = useDispatch();
   const [selectedOption, setSelectedOption] = React.useState(null);
   const [selectedOptionR, setSelectedOptionR] = React.useState(null);
-
+  document.getElementById("about-bg").style.backgroundImage = `url(./breakfast.jpg)`;
   function handleBack() {
       dispatch(changePage("distance"));
   }

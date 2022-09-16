@@ -6,7 +6,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(90deg, rgb(189, 195, 199) 0.00%,rgb(111, 70, 200) 100.00%);
 }
 #logo {
   border: 1px solid white;

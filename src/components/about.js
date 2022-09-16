@@ -1,7 +1,7 @@
 function About(){
     return(
         <div class="container-expand" id="about-bg" 
-        style={{ backgroundImage: `url(https://www.pexels.com/photo/1640777/download/)` }}>
+        style={{ backgroundImage: `url(./foodbg.jpeg)` }}>
         <div class="container-fluid bg-white" id="content-hold">
     <ul class="nav nav-tabs" id="myTab">
         <li class="nav-item" >

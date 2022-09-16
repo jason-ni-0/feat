@@ -6,6 +6,7 @@ import { changeLoc, changePage, changeLat, changeLng } from '../actions';
 import LoadingOverlay from "react-loading-overlay";
 import { InfinitySpin } from 'react-loader-spinner'
 
+import AutoComplete from 'react-google-autocomplete'
 
 import './start.css'
 
@@ -18,8 +19,8 @@ const Start = (props) => {
   const [status, setStatus] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
 
-  console.log(lat, lng);
-  console.log(status);
+  //console.log(lat, lng);
+  //console.log(status);
 
   const simpleAlertHandler = () => {
     alert(`Enter a valid location`);
@@ -89,7 +90,15 @@ const Start = (props) => {
       <p>&nbsp;</p>
       <p class="h1">Where to start?</p>
       <div class="input-group mb-3">
-      <input
+      <AutoComplete
+        apiKey={'AIzaSyDEh5m7WMOrSWdKSE01cH1Fg8fat-5zrss'}
+        onPlaceSelected={(place) => {
+        if(lat && lng){
+          setLat(null);
+          setLng(null);
+        }
+        setCurLoc(place.formatted_address);
+        }}
         type="text"
         placeholder='eg. Baltimore, 93117'
         id="locIn"
@@ -101,7 +110,7 @@ const Start = (props) => {
           setCurLoc(e.target.value);
         }}
         className="form-control"
-      />
+        />
       <div class="input-group-append">
       <button id="locButton" className="btn btn-primary btn-lg btn-block" onClick={getLocation}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>

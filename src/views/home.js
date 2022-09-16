@@ -45,7 +45,7 @@ const Home = (props) => {
         <Link className="navbar-brand" id="logo" to="/">FEAT</Link>
       </div>
       </nav>
-      <div class="container-expand" id="about-bg">
+      <div class="container-expand" style={{ backgroundImage: `url(./foodbg.jpeg)` }} id="about-bg">
       <div class="container-fluid bg-white align-items-center" id="content-hold">
         {toRender}
       </div>
