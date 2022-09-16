@@ -9,7 +9,7 @@ import { InfinitySpin } from 'react-loader-spinner'
 import { useNavigate } from "react-router-dom";
 
 
-function FeatPortal(){
+function FeatPortal(props){
     const navigate = useNavigate(); 
     const dispatch = useDispatch();
     const location = useSelector(state => state.location);
