@@ -91,7 +91,7 @@ const Start = (props) => {
       <p class="h1">Where to start?</p>
       <div class="input-group mb-3">
       <AutoComplete
-        apiKey={'AIzaSyDEh5m7WMOrSWdKSE01cH1Fg8fat-5zrss'}
+        apiKey={process.env.REACT_APP_GMAPS_API_KEY}
         onPlaceSelected={(place) => {
         if(lat && lng){
           setLat(null);
