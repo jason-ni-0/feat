@@ -25,7 +25,6 @@ function About(){
         <div class="tab-pane fade" id="howtouse">
             <h4 class="mt-2">How to get started</h4>
             <ol>
-                <li>Click the "Use Feat" tab</li>
                 <li>Enter your location or get location using the GPS button</li>
                 <li>Tell Feat how far you are willing to travel</li>
                 <li>(Optional) Select your preferred categories, eg. breakfast, asian food, etc.</li>
