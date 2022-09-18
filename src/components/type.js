@@ -66,7 +66,7 @@ const Type = (props) => {
   { value: 'coffee', label: 'Coffee' }
   //{ value: 'cafes', label: 'Cafe' },
   //{ value: 'diner', label: 'Diner' },
-  //{ value: 'dessert', label: 'Dessert' },
+  { value: 'dessert', label: 'Dessert' },
   //{ value: 'foodtrucks', label: 'Food Truck' },
 ];
   
