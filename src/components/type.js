@@ -63,10 +63,10 @@ const Type = (props) => {
   { value: 'bars', label: 'Bar' },
   { value: 'hotdogs', label: 'Fast Food' },
   //{ value: 'bubletea', label: 'Bubble Tea' },
-  { value: 'coffee', label: 'Coffee' }
+  { value: 'coffee', label: 'Coffee' },
   //{ value: 'cafes', label: 'Cafe' },
   //{ value: 'diner', label: 'Diner' },
-  { value: 'dessert', label: 'Dessert' },
+  { value: 'dessert', label: 'Dessert' }
   //{ value: 'foodtrucks', label: 'Food Truck' },
 ];
   
