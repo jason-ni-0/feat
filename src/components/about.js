@@ -29,7 +29,7 @@ function About(){
                 <li>Tell Feat how far you are willing to travel</li>
                 <li>(Optional) Select your preferred categories, eg. breakfast, asian food, etc.</li>
                 <li>(Optional) Select your budget</li>
-                <li>Submit for your divination</li>
+                <li>Submit for your divination!</li>
             </ol>
             <p>You will get up to three Feats, choose wisely! Try to choose one of those paths and stick to it, we are solving indecisiveness!</p>
         </div>
