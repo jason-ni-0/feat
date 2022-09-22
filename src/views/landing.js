@@ -76,8 +76,8 @@ function Landing(){
     <div class="tab-content">
         <div class="tab-pane fade show active" id="home">
         <h1 class="mt-2">
-            Save your time.
-            <small class="text-muted"> Let fate make the tedious decisions for you.</small>
+        Hungry? But indecisive?
+            <small class="text-muted"> Let Feat suggest where to eat.</small>
             </h1>
             <p>&nbsp;</p>
             <p class="h5">Feat divines your next restaurant visit in about a minute. No more overthinking and time wasting for all the indecisive ones out there. Simply give Feat some simple criteria (or none at all) 

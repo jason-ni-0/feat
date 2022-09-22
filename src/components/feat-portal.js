@@ -124,7 +124,7 @@ function FeatPortal(props){
               setCurLoc(place.formatted_address);
         }}
         type="text"
-        placeholder='eg. Baltimore, 93117'
+        placeholder='Location: eg. Baltimore, 93117'
         id="locIn"
         onChange={(e) => {
           if(lat && lng){
