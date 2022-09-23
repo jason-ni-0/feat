@@ -79,7 +79,8 @@ body {
     font-family: Fira Sans;
 }
 a{
-    cursor: pointer
+    cursor: pointer;
+    color: pink;
 }
 #botContact {
     color: white;
