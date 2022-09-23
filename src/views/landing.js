@@ -120,7 +120,7 @@ function Landing(){
             </div>
             <div id="botContact" class="container-fluid col d-grid gap-1">
                 <p>&nbsp;</p>
-                <h3>Contact</h3><p className="lead">Questions or suggestions: jasonni12345@gmail.com</p>
+                <h3>Contact</h3><p className="lead">Questions or suggestions: <a href = "mailto: feathelp@gmail.com">Send Email</a></p>
                 <p>© 2022 FEAT - ALL RIGHTS RESERVED.</p>
                 <p>&nbsp;</p>
             </div>
