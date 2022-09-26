@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from "axios";
-import AutoComplete from 'react-google-autocomplete'
 
 import { useSelector,useDispatch } from 'react-redux';
 import { changeLoc, changePage, changeLat, changeLng } from '../actions';
@@ -114,7 +113,7 @@ function FeatPortal(props){
         <p>&nbsp;</p>
         <p class="h1">Where to start?</p>
         <div class="input-group mb-3">
-        <AutoComplete
+        <input
         apiKey={process.env.REACT_APP_GMAPS_API_KEY}
         onPlaceSelected={(place) => {
             if(lat && lng){

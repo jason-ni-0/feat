@@ -6,8 +6,6 @@ import { changeLoc, changePage, changeLat, changeLng } from '../actions';
 import LoadingOverlay from "react-loading-overlay";
 import { InfinitySpin } from 'react-loader-spinner'
 
-import AutoComplete from 'react-google-autocomplete'
-
 import './start.css'
 
 const Start = (props) => {
@@ -90,7 +88,7 @@ const Start = (props) => {
       <p>&nbsp;</p>
       <p class="h1">Where to start?</p>
       <div class="input-group mb-3">
-      <AutoComplete
+      <input
         apiKey={process.env.REACT_APP_GMAPS_API_KEY}
         onPlaceSelected={(place) => {
         if(lat && lng){
