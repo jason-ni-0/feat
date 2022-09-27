@@ -98,6 +98,8 @@ const Start = (props) => {
         setCurLoc(place.formatted_address);
         }}
         type="text"
+        defaultValue={''}
+        options={{types: []}}
         placeholder='Location: eg. Baltimore, 93117'
         id="locIn"
         onChange={(e) => {
