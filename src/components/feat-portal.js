@@ -126,6 +126,8 @@ function FeatPortal(props){
         type="text"
         placeholder='Location: eg. Baltimore, 93117'
         id="locIn"
+        defaultValue={''}
+        options={{types: []}}
         onChange={(e) => {
           if(lat && lng){
             setLat(null);
