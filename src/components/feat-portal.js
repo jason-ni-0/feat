@@ -6,6 +6,7 @@ import { changeLoc, changePage, changeLat, changeLng } from '../actions';
 import LoadingOverlay from "react-loading-overlay";
 import { InfinitySpin } from 'react-loader-spinner'
 import { useNavigate } from "react-router-dom";
+import Autocomplete from "react-google-autocomplete";
 
 
 function FeatPortal(props){
@@ -113,7 +114,7 @@ function FeatPortal(props){
         <p>&nbsp;</p>
         <p class="h1">Where to start?</p>
         <div class="input-group mb-3">
-        <input
+        <Autocomplete
         apiKey={process.env.REACT_APP_GMAPS_API_KEY}
         onPlaceSelected={(place) => {
             if(lat && lng){

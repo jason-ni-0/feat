@@ -10,7 +10,6 @@
 
       gtag('config', 'G-9EJ3FF95EC');
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_GMAPS_API_KEY%&libraries=places"></script>
     <link rel="icon" href="./favcon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,12 +27,5 @@
   
   <body>
     <div id="app"></div>
-    <script>
-      function initialize() {
-          var input = document.getElementById('locIn');
-          new google.maps.places.Autocomplete(input);
-      }
-        google.maps.event.addDomListener(window, 'load', initialize);
-      </script>
   </body>
 </html>
