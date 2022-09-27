@@ -67,7 +67,7 @@ function FeatPortal(props){
           alert("Got location, press Start!");
           setLat(position.coords.latitude);
           setLng(position.coords.longitude);
-          document.getElementById('searchTextField').value = "Current Location";
+          document.getElementById('locIn').value = "Current Location";
         }, () => {
           alert('Unable to retrieve your location');
           setLoading(false);
@@ -124,7 +124,7 @@ function FeatPortal(props){
         }}
         type="text"
         placeholder='Location: eg. Baltimore, 93117'
-        id="searchTextField"
+        id="locIn"
         onChange={(e) => {
           if(lat && lng){
             setLat(null);
